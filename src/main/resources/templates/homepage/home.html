@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" th:href="@{/css/style.css}">
+    <link rel = "stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer th:src="@{/js/system.js}"></script>
+    <title>AnnaBazar.com</title>
+</head>
+<body>
+<input type="checkbox" id = "cart">
+<label for = "cart" class="label-cart"><span class = "fa fa-shopping-cart"></span></label>
+<h3 class="logo">Anna Delivery Services
+    <form method="post" th:action="@{/logout}">
+        <button type="Logout">Logout</button>
+
+    </form>
+</h3>
+
+<div class="sidebar">
+    <div class="sidebar-menu">
+        <span class = "fa fa-search"></span>
+        <a href="#">Search</a>
+    </div>
+    <div class="sidebar-menu">
+        <span class = "fa fa-home"></span>
+        <a href="#">Home</a>
+    </div>
+    <div class="sidebar-menu">
+        <span class = "fa fa-heart"></span>
+        <a href="#">Favs</a>
+    </div>
+    <div class="sidebar-menu">
+        <span class = "fa fa-user"></span>
+        <a href="#">Profile</a>
+    </div>
+    <div class="sidebar-menu">
+        <span class = "fa fa-cog"></span>
+        <a href="#">Setting</a>
+    </div>
+</div>
+
+<div class="dashboard">
+    <div class="dashboard-banner">
+        <img th:src = "@{/image/logo.jpg}">
+        <div class="banner-promo">
+            <h1><span>50% OFF</span><br>
+                Best Price <br> Best Quality</h1>
+        </div>
+    </div>
+    <h3 class = "dashboard-title">Recommend For You</h3>
+    <div class="dashboard-menu">
+        <a class= "bull" href="#">Favorites</a>
+        <a class= "bull" href="#">Top Rated</a>
+        <a class= "bull" href="#">All</a>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Apricot.jpg}">
+            <div class="card-detail">
+                <h4>Apricot<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Avocado.jpg}">
+            <div class="card-detail">
+                <h4>Avocado<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Blueberry.jpg}">
+            <div class="card-detail">
+                <h4>Blueberry<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/coconut.jpg}">
+            <div class="card-detail">
+                <h4>Coconut<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Jackfruit.jpg}">
+            <div class="card-detail">
+                <h4>Jackfruit<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Kiwi.jpg}">
+            <div class="card-detail">
+                <h4>Kiwi<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/lemon.jpg}">
+            <div class="card-detail">
+                <h4>Lemon<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Mandarin-orange.jpg}">
+            <div class="card-detail">
+                <h4>Mandarin-orange<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/mango.jpg}">
+            <div class="card-detail">
+                <h4>Mango<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Melon.jpg}">
+            <div class="card-detail">
+                <h4>Melon<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/pears.jpg}">
+            <div class="card-detail">
+                <h4>Pears<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-content hidden">
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/vegetables/ginger.jpg}">
+            <div class="card-detail">
+                <h4>Ginger<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/vegetables/Capsicums.jpg}">
+            <div class="card-detail">
+                <h4>Capsicums<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/vegetables/beetroot.jpg}">
+            <div class="card-detail">
+                <h4>Beetroot<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/vegetables/onion.jpg}">
+            <div class="card-detail">
+                <h4>Onion<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Jackfruit.jpg}">
+            <div class="card-detail">
+                <h4>Jackfruit<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Kiwi.jpg}">
+            <div class="card-detail">
+                <h4>Kiwi<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/vegetables/eggplant.jpg}">
+            <div class="card-detail">
+                <h4>Eggplant<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Mandarin-orange.jpg}">
+            <div class="card-detail">
+                <h4>Mandarin-orange<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/mango.jpg}">
+            <div class="card-detail">
+                <h4>Mango<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/vegetables/fennel.jpg}">
+            <div class="card-detail">
+                <h4>Fennel<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/pears.jpg}">
+            <div class="card-detail">
+                <h4>Pears<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-content hidden">
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/vegetables/carrot.jpg}">
+            <div class="card-detail">
+                <h4>Carrot<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/vegetables/cucumber.jpg}">
+            <div class="card-detail">
+                <h4>Cucumber<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/vegetables/artichoke.jpg}">
+            <div class="card-detail">
+                <h4>Artichoke<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Apricot.jpg}">
+            <div class="card-detail">
+                <h4>Apricot<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/vegetables/drumstick.jpg}">
+            <div class="card-detail">
+                <h4>Drumstick<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Kiwi.jpg}">
+            <div class="card-detail">
+                <h4>Kiwi<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/lemon.jpg}">
+            <div class="card-detail">
+                <h4>Lemon<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Mandarin-orange.jpg}">
+            <div class="card-detail">
+                <h4>Mandarin-orange<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/mango.jpg}">
+            <div class="card-detail">
+                <h4>Mango<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/Melon.jpg}">
+            <div class="card-detail">
+                <h4>Melon<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+        <div class="dashboard-card">
+            <img class=" card-image" th:src = "@{/image/fruits/pears.jpg}">
+            <div class="card-detail">
+                <h4>Pears<span>Price:$1</span></h4>
+                <p>As per the Quantity</p>
+                <p class= "card-time"><span class = "fa fa-clock-o"></span> 30-60 mins</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="dashboard-order">
+    <h3>Order Menu</h3>
+    <div class="order-address">
+        <p>Address Delivery</p>
+        <h4>Kathmandu, Nepal</h4>
+    </div>
+    <div class="order-time">
+        <span class = "fa fa-clock-o"></span> 30 mins <span class="fa fa-map-marker"> 2 km</span>
+    </div>
+
+    <div class="order-wrapper">
+        <div class="order-card">
+            <img class="order-image" th:src= "@{/image/fruits/Avocado.jpg}">
+            <div class="order-detail">
+                <p>Avocado</p>
+                <i class="fa fa-times"></i>
+                <button class="decrease-item">-</button>
+                <span>1</span>
+                <button class="increase-item">+</button>
+            </div>
+            <h4 class="order-price">$1</h4>
+        </div>
+        <div class="order-card">
+            <img class="order-image" th:src= "@{/image/fruits/Jackfruit.jpg}">
+            <div class="order-detail">
+                <p>Jackfruit</p>
+                <i class="fa fa-times"></i>
+                <button class="decrease-item">-</button>
+                <span>1</span>
+                <button class="increase-item">+</button>
+            </div>
+            <h4 class="order-price">$1</h4>
+        </div>
+        <div class="order-card">
+            <img class="order-image" th:src= "@{/image/fruits/Kiwi.jpg}">
+            <div class="order-detail">
+                <p>Kiwi</p>
+                <i class="fa fa-times"></i>
+                <button class="decrease-item">-</button>
+                <span>1</span>
+                <button class="increase-item">+</button>
+            </div>
+            <h4 class="order-price">$1</h4>
+        </div>
+    </div>
+    <hr class="divider">
+    <div class="order-total">
+        <p>Subtotal <span>$12</span></p>
+        <p>Tax (10%) <span>$15.6</span></p>
+        <p>Delivery Fee <span>$3</span></p>
+    </div>
+</div>
+</body>
+</html>

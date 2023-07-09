@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" th:href="@{/css/one.css}">
+
+</head>
+<body>
+<div class="container">
+
+    <section>
+
+        <form action="" method="post" class="add-product-form" enctype="multipart/form-data">
+            <h3>add a new product</h3>
+            <input type="text" name="p_name" placeholder="Enter item name" class="box" required>
+            <input type="text" name="p_price" placeholder="Enter item price" class="box" required>
+            <input type="number" name="number" min="0" max="5" step="0.5" placeholder="Enter item rating (0-5)" class="box" required>
+            <input type="file" name="image" accept="image/*" class="box" required>
+            <textarea name="description" placeholder="Enter item description" class="box" required></textarea>
+            <input type="submit" value="add the product" name="add_product" class="btn">
+        </form>
+
+    </section>
+
+    <section class="display-product-table">
+
+        <table>
+
+            <thead>
+            <th>product image</th>
+            <th>product name</th>
+            <th>product price</th>
+            <th>product rating</th>
+            <th>product description</th>
+            <th>action</th>
+            </thead>
+        </table>
+
+    </section>
+
+    <section class="edit-form-container">
+
+    </section>
+
+</div>
+<!-- custom js file link  -->
+<!-- <script src="js/script.js"></script> -->
+
+</body>
+</html>
