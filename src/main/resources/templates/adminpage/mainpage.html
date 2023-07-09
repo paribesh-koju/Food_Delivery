@@ -18,8 +18,9 @@
 
     <section>
 
-        <form action="" method="post" class="add-product-form" enctype="multipart/form-data">
+        <form th:method="@{post}" th:action="@{/th-admin/save}" th:object="${adminPagePojo}" class="add-product-form" enctype="multipart/form-data">
             <h3>add a new product</h3>
+            <input type="hidden" th:value="${adminPagePojo.id}" th:field="*{id}"/>
             <input type="text" name="p_name" placeholder="Enter item name" class="box" required>
             <input type="text" name="p_price" placeholder="Enter item price" class="box" required>
             <input type="number" name="number" min="0" max="5" step="0.5" placeholder="Enter item rating (0-5)" class="box" required>
