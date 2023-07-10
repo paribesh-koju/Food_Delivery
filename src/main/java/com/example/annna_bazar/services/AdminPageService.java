@@ -3,11 +3,12 @@ package com.example.annna_bazar.services;
 import com.example.annna_bazar.entity.AdminPage;
 import com.example.annna_bazar.pojo.AdminPagePojo;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
 public interface AdminPageService {
-    void saveData (AdminPagePojo adminPagePojo);
+    void saveData (AdminPagePojo adminPagePojo) throws IOException;
 
     List<AdminPage> getData();
 

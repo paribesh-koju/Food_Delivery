@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,7 +33,7 @@ public class AdminPageController {
 
     @PostMapping("save")
     public String saveData(@Valid AdminPagePojo adminPagePojo,
-                           BindingResult bindingResult) {
+                           BindingResult bindingResult) throws IOException {
         if(bindingResult.hasErrors()){
             System.out.println(bindingResult);
 
