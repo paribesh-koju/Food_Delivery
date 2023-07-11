@@ -22,4 +22,5 @@ public interface UserService {
 
     void sendEmail();
 
+    User fatchByEmail(String email);
 }

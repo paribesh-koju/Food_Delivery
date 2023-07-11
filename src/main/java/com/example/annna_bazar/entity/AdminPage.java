@@ -20,7 +20,7 @@ public class AdminPage {
     private String item_name;
 
     @Column(name = "item_price", nullable = false)
-    private double item_price;
+    private String item_price;
 
     @Column(name = "item_rating", length = 5, nullable = false)
     private Integer item_rating;

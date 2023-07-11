@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Profile</title>
 
     <!-- custom css file link  -->
     <link rel="stylesheet" th:href="@{/css/all.css}">
@@ -14,14 +14,18 @@
 
 <div class="container">
 
-    <div class="profile">
+    <div class="profile" th:method = "@{post}" th:action = "@{/profile}">
         <img th:src="@{/photo/default-avatar.png}">
-        <h3>Paribesh koju</h3>
+<!--        <img th:src="'data:image/png;base64,'+${user.imageBase64}"/>-->
+<!--        <h3>Paribesh koju</h3>-->
+        <h3 th:text = "${user.getFullName()}"></h3>
         <a href="editprofile.html" class="btn">Edit Profile</a>
-        <a href="#" class="delete-btn">logout</a>
 
+    <form method="post" th:action="@{/logout}">
+<!--        <a href="#" class="delete-btn">logout</a>-->
+        <button type="Logout" class="delete-btn">Logout</button>
+    </form>
     </div>
-
 </div>
 
 </body>

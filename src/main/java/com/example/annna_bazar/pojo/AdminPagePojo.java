@@ -18,8 +18,8 @@ public class AdminPagePojo {
     @NotEmpty(message = "name can't be empty")
     private String item_name;
 
-//    @NotEmpty(message = "price can't be empty")
-    private double item_price;
+    @NotEmpty(message = "price can't be empty")
+    private String item_price;
 
 //    @NotEmpty(message = "Rating can't be empty")
     private Integer item_rating;
