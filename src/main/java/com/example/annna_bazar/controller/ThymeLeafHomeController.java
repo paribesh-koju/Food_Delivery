@@ -2,9 +2,12 @@ package com.example.annna_bazar.controller;
 
 
 import com.example.annna_bazar.entity.AdminPage;
+import com.example.annna_bazar.entity.User;
 import com.example.annna_bazar.pojo.HomePojo;
+import com.example.annna_bazar.repo.UserRepo;
 import com.example.annna_bazar.services.AdminPageService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,9 +23,12 @@ import java.util.Base64;
 @RequiredArgsConstructor
 public class ThymeLeafHomeController {
     private final AdminPageService adminPageService;
+    private final UserRepo userRepo;
     @GetMapping("create")
     public String getFormPage(Model model){
         model.addAttribute("home", new HomePojo());
+        User userDetail=userRepo.findByEmail(SecurityContextHolder.getContext().getAuthentication().getName()).get();
+        model.addAttribute("userDetail",userDetail );
         model.addAttribute("items",adminPageService.getAllData().stream().map(res->
                 AdminPage.builder()
                         .id(res.getId())

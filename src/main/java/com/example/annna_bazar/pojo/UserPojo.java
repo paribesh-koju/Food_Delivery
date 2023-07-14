@@ -27,7 +27,7 @@ public class UserPojo {
     @NotEmpty(message = "Password can't be empty")
     private String password;
 
-//    private MultipartFile image;
+    private MultipartFile image;
 
     public UserPojo(User user){
         this.id=user.getId();
@@ -36,4 +36,6 @@ public class UserPojo {
         this.mobile_no=user.getMobileNo();
         this.password=user.getPassword();
     }
+
+
 }

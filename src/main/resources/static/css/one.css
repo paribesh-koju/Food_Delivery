@@ -542,6 +542,7 @@ section{
 
 }
 
+
 @media (max-width:768px){
 
    #menu-btn{
@@ -585,7 +586,7 @@ section{
 @media (max-width:450px){
 
    html{
-      font-size: 50%;
+      font-size: 26%;
    }
 
    .heading{

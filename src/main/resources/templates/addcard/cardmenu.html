@@ -23,18 +23,32 @@
     <table>
 
       <thead>
+      <tr>
       <th>image</th>
       <th>name</th>
       <th>price</th>
-      <th>quantity</th>
-      <th>total price</th>
       <th>action</th>
+      </tr>
+      <tbody>
+      <tr th:each="order:${orderListPojo}">
+        <td>
+                  <img th:src="'data:image/png;base64,'+${order.image}" width="100"/>
+        </td>
+<!--        <td th:text="${order.image}"></td>-->
+        <td th:text="${order.item_price}"></td>
+        <td th:text="${order.item_name}"></td>
+        <td>
+<!--          <a class="delete" th:href="">Delete</a>-->
+
+        </td>
+      </tr>
+      </tbody>
       </thead>
 
     </table>
 
     <div class="checkout-btn">
-      <a href="checkout.html" class="btn">procced to checkout</a>
+      <a href="/checkout" class="btn">procced to checkout</a>
     </div>
 
   </section>

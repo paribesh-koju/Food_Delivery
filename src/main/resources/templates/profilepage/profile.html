@@ -11,15 +11,22 @@
 
 </head>
 <body>
-
+<header class="header">
+    <a href="/" class="logo">Anna Bazar<span class="yellow">roo</span></a>
+    <nav class="navbar">
+        <a th:href="@{/th-home/create}" class="btn">Go Home</a>
+    </nav>
+</header>
+<!--<a href="#" class="delete-btn">Go Home</a>-->
 <div class="container">
 
+
     <div class="profile" th:method = "@{post}" th:action = "@{/profile}">
-        <img th:src="@{/photo/default-avatar.png}">
-<!--        <img th:src="'data:image/png;base64,'+${user.imageBase64}"/>-->
+<!--        <img th:src="@{/photo/default-avatar.png}">-->
+        <img th:src="'data:image/png;base64,'+${edi.imageBase64}"/>
 <!--        <h3>Paribesh koju</h3>-->
         <h3 th:text = "${user.getFullName()}"></h3>
-        <a href="editprofile.html" class="btn">Edit Profile</a>
+        <a href="/editprofile" class="btn">Edit Profile</a>
 
     <form method="post" th:action="@{/logout}">
 <!--        <a href="#" class="delete-btn">logout</a>-->

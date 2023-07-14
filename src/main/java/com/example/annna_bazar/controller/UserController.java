@@ -66,6 +66,22 @@ public class UserController {
         return errors;
 
     }
+    @PostMapping("/update")
+    public String updateUser(@Valid UserPojo userPojo,
+                             BindingResult bindingResult, RedirectAttributes redirectAttributes) throws IOException {
+
+//        Map<String, String> requestError = validateRequest(bindingResult);
+//        if (requestError != null) {
+//            redirectAttributes.addFlashAttribute("requestError", requestError);
+//            return "redirect:/editprofile";
+//        }
+
+        userService.update(userPojo);
+        redirectAttributes.addFlashAttribute("successMsg", "User saved successfully");
+
+
+        return "redirect:/profile";
+    }
 
 }
 
