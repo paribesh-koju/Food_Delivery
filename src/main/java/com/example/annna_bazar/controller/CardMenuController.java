@@ -10,6 +10,7 @@ import com.example.annna_bazar.services.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +26,7 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping
+@RequestMapping("/card")
 public class CardMenuController {
 
     private final OrderService orderService;
@@ -37,6 +38,7 @@ public class CardMenuController {
         List<OrderListPojo> orderListPojo=new ArrayList<>();
         orderList.stream().forEach(i->{
             OrderListPojo order = new OrderListPojo();
+            order.setId((Integer) Array.get(i,0));
             order.setImage(getImageBase64((String) Array.get(i,3)));
             order.setItem_price((String) Array.get(i,4));
             order.setItem_name((String) Array.get(i,5));
@@ -46,6 +48,12 @@ public class CardMenuController {
         });
         model.addAttribute("orderListPojo",orderListPojo );
         return "addcard/cardmenu.html";
+    }
+
+    @GetMapping("delete/{id}")
+    public String getDeleteData(@PathVariable Integer id){
+        orderService.deleteById(id);
+        return "redirect:/card/cardmenu/4";
     }
 
 

@@ -50,7 +50,7 @@ public class ThymeLeafAdminPageController {
         model.addAttribute("adminPagePojo",new AdminPagePojo(adminPage));
         return "adminpage/mainpage.html";
     }
-    @GetMapping("delete/{id}")
+    @GetMapping("/delete/{id}")
     public String getDeleteData(@PathVariable Integer id){
         adminPageService.deleteById(id);
         return "redirect:/th-admin/create";

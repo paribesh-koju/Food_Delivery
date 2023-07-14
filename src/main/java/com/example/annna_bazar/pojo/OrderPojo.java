@@ -12,7 +12,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderPojo {
-    private Integer id;
     private Integer user_id;
     private Integer adminPage_id;
 }

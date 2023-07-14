@@ -16,4 +16,7 @@ public interface OrderService {
     List<Object> getOrderList(Integer user_id);
 
     Optional<Order> fetchAll(Integer id);
+
+
+    void deleteById(Integer id);
 }

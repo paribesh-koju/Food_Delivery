@@ -10,6 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderListPojo {
+    private Integer id;
     private String image;
     private String item_name;
     private String item_price;

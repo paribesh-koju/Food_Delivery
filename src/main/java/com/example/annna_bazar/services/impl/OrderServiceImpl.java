@@ -9,6 +9,7 @@ import com.example.annna_bazar.services.AdminPageService;
 import com.example.annna_bazar.services.OrderService;
 import com.example.annna_bazar.services.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -43,6 +44,11 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Optional<Order> fetchAll(Integer id) {
         return orderRepo.findById(id);
+    }
+
+    @Override
+    public void deleteById(Integer id) {
+        orderRepo.deleteById(id);
     }
 
 
