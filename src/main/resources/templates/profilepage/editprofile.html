@@ -14,7 +14,7 @@
 
 <div class="update-profile">
 
-    <form th:action="@{/user/update}" th:method="@{post}" th:object="${change}" enctype="multipart/form-data">
+    <form onsubmit="fun()" th:action="@{/user/update}" th:method="@{post}" th:object="${change}" enctype="multipart/form-data">
         <img id ="inp-img">
 <!--        <img th:src="'data:image/png;base64,'+${change.imageBase64}"/>-->
         <div class="flex">
@@ -57,5 +57,9 @@
     }
 
     inputImg?.addEventListener("change", getImg);
+
+    function fun(){
+        alert("update successfully")
+    }
 </script>
 </html>

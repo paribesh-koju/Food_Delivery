@@ -25,7 +25,26 @@
       <div class="display-order">
         <span class="grand-total" th:text="${total}" th:value="${total}"></span>
       </div>
-
+      <div class="flex">
+        <div class="inputBox">
+          <span>payment method</span>
+          <select name="method">
+            <option value="cash on delivery" selected>cash on devlivery</option>
+          </select>
+        </div>
+        <div class="inputBox">
+          <span>Permanent Address</span>
+          <input type="text" placeholder="e.g. flat no." name="flat" required>
+        </div>
+        <div class="inputBox">
+          <span>Temporary Address</span>
+          <input type="text" placeholder="e.g. street name" name="street" required>
+        </div>
+        <div class="inputBox">
+          <span>city</span>
+          <input type="text" placeholder="e.g. Kathmandu" name="city" required>
+        </div>
+      </div>
 
       <input type="submit" value="order now" name="order_btn" class="btn">
     </form>

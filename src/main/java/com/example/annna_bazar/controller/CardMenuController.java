@@ -5,6 +5,7 @@ import com.example.annna_bazar.entity.AdminPage;
 import com.example.annna_bazar.entity.Order;
 import com.example.annna_bazar.pojo.OrderListPojo;
 import com.example.annna_bazar.pojo.OrderPojo;
+import com.example.annna_bazar.repo.OrderRepo;
 import com.example.annna_bazar.services.AdminPageService;
 import com.example.annna_bazar.services.OrderService;
 import lombok.RequiredArgsConstructor;
@@ -31,6 +32,7 @@ public class CardMenuController {
 
     private final OrderService orderService;
     private final AdminPageService adminPageService;
+    private final OrderRepo orderRepo;
 
     @GetMapping("/cardmenu/{user_id}")
     public String getStartPage(@PathVariable Integer user_id, Model model) {
@@ -52,8 +54,10 @@ public class CardMenuController {
 
     @GetMapping("delete/{id}")
     public String getDeleteData(@PathVariable Integer id){
+        Order order=orderRepo.findById(id).get();
+        String uid = order.getUser().getId().toString();
         orderService.deleteById(id);
-        return "redirect:/card/cardmenu/4";
+        return "redirect:/card/cardmenu/" + uid;
     }
 
 

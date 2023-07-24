@@ -45,9 +45,14 @@ public class CheckoutController {
             String unPrice = ad.getItem_price();
             String tempPrice = "";
             for(int i = 3; i < unPrice.length(); i++){
-                tempPrice+=unPrice.charAt(i);
+                char c = unPrice.charAt(i);
+                if (Character.isDigit(c)) {
+                    tempPrice += c;
+                }
             }
-            total+=Integer.parseInt(tempPrice);
+            if (!tempPrice.isEmpty()) {
+                total += Integer.parseInt(tempPrice);
+            }
         }
         return total;
     }
