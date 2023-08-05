@@ -20,10 +20,11 @@
 
     <h1 class="heading">complete your order</h1>
 
-    <form action="" method="post">
+    <form th:method="@{post}">
 
       <div class="display-order">
-        <span class="grand-total" th:text="${total}" th:value="${total}"></span>
+        <span class="grand-total" > Rs 700</span>
+<!--        th:text="${total}" th:value="${total}"-->
       </div>
       <div class="flex">
         <div class="inputBox">
@@ -46,7 +47,8 @@
         </div>
       </div>
 
-      <input type="submit" value="order now" name="order_btn" class="btn">
+<!--      <input type="submit" value="order now" name="order_btn" class="btn">-->
+      <a th:href="@{/th-home/create}" onclick="fun()" class="btn">Order now</a>
     </form>
 
   </section>
@@ -55,6 +57,11 @@
 
 <!-- custom js file link  -->
 <!--<script src="js/script.js"></script>-->
+<script>
+  function fun(){
+    alert("Order checkout Successful ");
+  }
+</script>
 
 </body>
 </html>

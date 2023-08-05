@@ -434,7 +434,7 @@
                 <li><i class = "fa fa-star checked"></i></li>
                 <li><i class = "fa fa-star "></i></li>
             </ul>
-            <form th:action="@{/order/saveorder}" th:method="@{post}" th:object="${orderPojo}">
+            <form onsubmit="fun()" th:action="@{/order/saveorder}" th:method="@{post}" th:object="${orderPojo}">
             <input type="hidden" th:value="${userDetail.id}" name="user_id"></input>
             <input type="hidden" th:value="${item.id}" name="adminPage_id"></input>
             <button class = "buy-all">Order Now</button>

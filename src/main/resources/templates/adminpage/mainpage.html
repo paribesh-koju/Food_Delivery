@@ -23,7 +23,7 @@
 <div class="container">
     <section>
 
-        <form th:method="@{post}" th:action="@{/th-admin/save}" th:object="${adminPagePojo}" class="add-product-form"
+        <form onsubmit="fun()" th:method="@{post}" th:action="@{/th-admin/save}" th:object="${adminPagePojo}" class="add-product-form"
               enctype="multipart/form-data">
             <h3>add a new product</h3>
             <input type="hidden" th:value="${adminPagePojo.id}" th:field="*{id}"/>
@@ -78,6 +78,11 @@
 </div>
 <!-- custom js file link  -->
 <!-- <script src="js/script.js"></script> -->
+<script>
+    function fun(){
+        alert("Successfully add items");
+    }
+</script>
 
 </body>
 </html>

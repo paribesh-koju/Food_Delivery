@@ -65,3 +65,6 @@ window.addEventListener("scroll", (e) => {
     }
 });
 
+function fun(){
+    alert("Successfully order item");
+}
